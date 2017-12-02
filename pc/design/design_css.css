@@ -29,10 +29,10 @@ body{background:#fff;}
   border-radius: 4px;
 }
 
-/* フォント変更 */
+/* 基本フォント変更 */
 body{
     color:#303030;
-    font-family: 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;/* フォント */
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 /* 全体配置 */
@@ -50,30 +50,54 @@ body{
     width:1200px;
     margin: auto;
     padding: 0;
-    /* background-color: #f0f0f0; */
 }
-/* 横幅計算 */
+/* （参考）横幅計算 */
 /* wrapper_width =
     main_width + main_padding*2 + main_margin_right
     content_width =
     wrapper_width + box2_width + box2_padding*2
 */
 
+/* タイトルとパンくずリストの間*/
+#top-editarea{
+    margin:0 0 20px 0;
+}
+
+/* 記事のパンくずリスト */
+.breadcrumb {
+    background-color: #fff;
+    border-radius: 4px;
+    border-left: 4px solid #202774;
+    border-right: 4px solid #202774;
+    padding: 10px;
+}
+
 #wrapper{
-    width: 780px;
+    width: 840px;
+    margin-right: 40px;
 }
 #main {
-    width:670px;
-    padding: 20px 40px;
-    margin: 0 30px 0 0;
+    width: 840px;
     background-color: #fff;
     border-radius: 4px;
+    border-top: 6px solid #202774;
+    padding: 0;
+}
+#main-inner {
+    padding: 20px 40px;
+}
+#box1{
+  display: none;
 }
 #box2{
-    width:280px;
-    padding: 20px;
+    width:320px;
     background-color: #fff;
     border-radius: 4px;
+    border-top: 6px solid #202774;
+}
+
+#box2-inner{
+    padding: 20px;
 }
 
 /* ブログのタイトル画像を広げる */
@@ -103,43 +127,26 @@ body{
     text-shadow: 0 1px 2px #000;
 }
 
-#top-editarea{
-    margin:0 0 20px 0;
-}
-
-/* */
-#top_navigater {
-  /*
-    height: 50px;
-    background-color: #fff;
-    border-top: 1px solid #707070;
-    border-bottom: 1px solid #707070;
-    */
-}
-#top_affiliate {
-    text-align: center;
-    margin: 10px 0;
-}
-
-/** 記事一覧 **/
-/* */
+/* 記事一覧 */
+/** */
 .page-archive .archive-entry {
     border-bottom: 1px dotted #5f5f5f;
     padding-bottom: 10px;
 }
-/**/
+/** 記事一覧の日付部分*/
 .page-archive .archive-date {
 }
 
-/* サムネ画像 */
+/** サムネネイル画像 */
 .page-archive .entry-thumb {
     border-radius: 4px;
     border: 1px solid #5f5f5f;
 }
+/* 記事一覧 ここまで */
 
-/** サイドメニュー */
+/* サイドメニュー */
 
-/* 検索窓 */
+/** 検索窓 */
 .search-form .search-module-input {
     width: 220px;
     height: 24px;
@@ -153,7 +160,7 @@ body{
     -moz-border-radius: 5px;
 }
 
-/* サイドメニュータイトル */
+/** サイドメニュータイトル */
 .hatena-module-title {
     position: relative;
     padding: 0.4em 0 0.4em 1.0em;
@@ -179,7 +186,7 @@ body{
     height: 0;
 }
 
-/** 記事ページのCSS **/
+/** 記事ごとのページのCSS */
 
 /* 記事の基本の文字サイズ */
 .entry-content p {
