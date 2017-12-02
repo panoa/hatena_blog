@@ -1,149 +1,377 @@
-<!-- アフィリエイト -->
-<!-- Zaif -->
-<div id="top_affiliate">
-  <a href="https://zaif.jp?ac=lgmdrqfkzg" rel="nofollow"><img src="https://d2p8taqyjofgrq.cloudfront.net/images/affiliate/banner/zaif_D_728x90.png?ac=lgmdrqfkzg" /></a>
-</div>
+<style type="text/css">
+/* フォント変更 */
+body{
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;/* フォント */
+}
+
+<style type="text/css">
+  .show-area{
+    color: #47a1e5
+  }
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 <script>
 // 目次 表示/非表示ボタン
 $(function(){
-  var $Contents = $(".table-of-contents")
-  $($Contents).before('<p class="show-area">[目次を見る]</p>');
-  $(".show-area").click(function(){
-    var $this = $(this);
-    if($Contents.css('display') == 'none'){
-      $Contents.show(),
-      $this.text("[目次を閉じる]");
-    }else{
-      $Contents.hide(),
-      $this.text("[目次を見る]")
-    };
-  });
+    var $Contents = $(".table-of-contents")
+    $($Contents).before('<p class="show-area">[目次を見る]</p>');
+    $(".show-area").click(function(){
+        var $this = $(this);
+        if($Contents.css('display') == 'none'){
+            $Contents.show(),
+            $this.text("[目次を閉じる]");
+        }else{
+            $Contents.hide(),
+            $this.text("[目次を見る]")
+        };
+    });
 });
 </script>
 
 <style type="text/css">
-/* ソーシャルブックマークボタンの配備 */
-/* 回り込み解除のためのクラス */
-.clearfix{
-  zoom:1;
+/* ブログヘッダを非表示 */
+#globalheader-container {
+    display:none;
 }
-.clearfix:after{
-    content:"";
-    display: block;
-    clear: both;
-    height: 0;
-    visibility:hidden;
-}
-
-/* サークルのスタイル */
-.sns_circle{
-    position:relative;
-    width: 50px;
-    height: 50px;
-    margin:0 3px 0 3px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background-color: #999;
-    float:left;
-    list-style: none;
-}
-
-/* Webフォントに関する指定 */
-.sns_circle span{
-    position:absolute;
-    font-size:35px;
-    color:#FFF;
-}
-
-/* Webフォントに関する指定(はてぶ) */
-.sns_circle.hatebu.sns_circle span{
-    position:absolute;
-    padding:8px 0 0 8px;
-    color:#FFF;
-    font-size: 30px;
-}
-
-/* Webフォントに関する指定(Twitter) */
-.sns_circle.twitter.sns_circle span{
-    position:absolute;
-    padding:8px 0 0 8px;
-    color:#FFF;
-}
-
-/* Webフォントに関する指定(Facebook) */
-.sns_circle.facebook.sns_circle span{
-    position:absolute;
-    padding:8px 0 0 18px;
-    color:#FFF;
-}
-
-/* Webフォントに関する指定(Google+) */
-.sns_circle.googleplus.sns_circle span{
-    position:absolute;
-    padding:10px 0 0 14px;
-    color:#FFF;
-    font-size: 30px;
-}
-
-/* Webフォントに関する指定(Pocket) */
-.sns_circle.pocket.sns_circle span{
-    position:absolute;
-    padding:12px 0 0 12px;
-    font-size: 28px;
-    color:#FFF;
-}
-
-/* リンク領域をブロック全体に */
-.sns_circle a{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    text-indent:-999px;
-    color:#FFF;
-}
-
-/* マウスオーバー時のスタイル */
-.sns_circle a:hover{
-    background-color:#FFF;
-    opacity: 0.5;
-}
-
-/* シェアボタンエリア */
-ul.circle_group{
-    width: 280px;
-    margin:auto;
-    list-style: none;
+#container{
     padding:0;
 }
-
-/* Font Awesome hatena bookmark（手作り） */
-.fa-hatena:before {
-    content: "B!";
-    font-family: Verdana;
-    font-weight: bold;
+/* 目次 */
+.entry-content ul.table-of-contents {
+  margin: 0;
+  padding: 10px 10px 0 2.0em;
 }
 
-/* アイコン毎の配色と配置 */
-.sns_circle.hatebu{
-    background-color: #006fbb;
+.table-of-contents{
+    display:none;
+    border: solid 2px #5b8bd0; /*点線*/
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    font-size: 15px;
+  }
+
+.table-of-contents li {
+      margin: 0;
+      margin-bottom:10px;
+      padding: 0;
+  }
+
+.table-of-contents ul li {
+  margin: 0;
 }
-.sns_circle.twitter{
-    background-color: #00acec;
+
+/* */
+  .show-area{
+    cursor: pointer;
+    color: #47a1e5
+  }
+
+/* 数式 */
+.math_expression{
+    padding: 10px 0.5em 10px 0.5em;
+    border: 1px solid #909090;
+    border-radius: 4px;
 }
-.sns_circle.facebook{
-    background-color: #265a96;
+
+/* 引用 */
+.entry blockquote {
+    position: relative;
+    padding: 40px 15px 8px 15px;
+    font-style: italic;
+    background: #efefef;
+    color: #555;
 }
-.sns_circle.googleplus{
-    background-color: #dd4b39;
+
+.entry blockquote:before{
+    display: inline-block;
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    vertical-align: middle;
+    content: "\f10d";
+    font-family: FontAwesome;
+    color: #cfcfcf;
+    font-size: 28px;
+    line-height: 1;
 }
-.sns_circle.pocket{
-    background-color: #EE4256;
+
+.entry blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
 }
+
+.entry blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}
+/* 引用ここまで*/
+
+/* アフィリエイト */
+/* カエレバ CSS カスタム*/
+.kaerebalink-box {
+  box-sizing:border-box;
+  border: 1px solid #909090;
+  border-radius: 4px;
+  padding: 5px 0;
+  text-align:left;
+  zoom: 1;
+  overflow: hidden;
+}
+
+.kaerebalink-box:after{
+  clear:left;
+}
+
+.kaerebalink-image {
+    float:left;
+}
+
+.kaerebalink-info{
+    zoom: 1;
+    overflow: hidden;
+}
+
+.kaerebalink-detail{
+  margin-bottom: 10px;
+}
+
+.kaerebalink-detail p{
+  font-size: 14px;
+  margin:0;
+  line-height: 20px;
+}
+
+.kaerebalink-link1 {
+  text-align:left;
+  zoom: 1;
+  overflow: hidden;
+}
+/* amazon link*/
+.shoplinkamazon {
+  float:left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.shoplinkamazon a {
+   position: relative;
+   display: block;
+   height: 26px;
+   width: 100px;
+   text-decoration: none;
+   background: #fdc689;
+   color: #fff;
+   font-size: 14px;
+   line-height: 26px;
+   text-align: center;
+   border-radius: 3px;
+   border: 1px solid #909090;
+}
+
+/* 楽天 link*/
+.shoplinkrakuten {
+  float:left;
+}
+
+.shoplinkrakuten a {
+    position: relative;
+    display: block;
+    height: 26px;
+    width: 100px;
+    text-decoration: none;
+    background: #ff2323;
+    color: #fff;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #909090;
+}
+/* アフィリエイト ここまで */
+/* 見出しをふせんぽく　*/
+.entry-content h3 {
+    border-bottom: none;
+}
+h3 {
+    padding: 0.2em 1em;
+    margin-bottom: 1.5em;
+    color: #232323;
+    background: #fff8e8;
+    border-left: 10px solid #ffc06e;
+}
+h4 {
+    position: relative;
+    width:70%;
+    margin: 0 29% 1em 1%;
+    padding-bottom:5px;
+    color: #232323;
+}
+h4::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: -webkit-linear-gradient(left, #ffc06e 75%, rgba(255,192,110,0));
+    background-image: linear-gradient(to right, #ffc06e 75%, rgba(255,192,110,0));
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h5, h6, h7{
+    border-right: solid 10px #fff;
+    padding: 0.2em 1em;
+    color: #232323;
+    background: #e9e9e9;
+}
+
+/*****ここから会話のCSS*****/
+.talk-wrap{
+ display: block;
+ clear: both;
+ margin:0 auto 3px auto;
+ }
+.talk-wrap p{
+ margin:0;
+ }
+ .left-icon{
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ background: no-repeat;
+ background-size: 100%;
+ background-position: center;
+ float:left;
+ display:inline-block;
+ box-shadow: 1px 1px 5px #aaa; /*左のアイコンの影の設定*/
+ border: 2px solid #fff; /*左のアイコンの枠の設定*/
+ margin-left: 5px;
+ margin-bottom: 15px;
+ }
+ .talk-left{
+ float:left;
+ position: relative;
+ left: 20px;
+ width: 400px;
+ background: #fff; /*左の会話の背景色*/
+ border: 2px solid #666;
+ border-radius: 10px;
+ box-shadow: 1px 1px 5px #aaa; /*左の会話の影の設定*/
+ padding: 10px 20px;
+ margin-top: 5px;
+ margin-bottom: 15px;
+ }
+.talk-left:before {
+ content: "";
+ display: inline-block;
+ border: 10px solid transparent;
+ border-right-color: #666;
+ position: absolute;
+ left: -20px;
+ top: 25%;
+ margin-top: -9px;
+}
+.talk-left:after {
+ content: "";
+ display: inline-block;
+ border: 9px solid transparent;
+ border-right-color: #fff;
+ position: absolute;
+ left: -16px;
+ top: 25%;
+ margin-top: -8px;
+}
+ .right-icon{
+ float:right;
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ -webkit-border-radius:50%;
+ background: no-repeat;
+ background-size: 100%;
+ background-position: center;
+ display:inline-block;
+ box-shadow: 1px 1px 5px #aaa; /*右のアイコンの影の設定*/
+ border: 2px solid #FFF; /*右のアイコンの枠の設定*/
+ margin-right: 5px;
+ margin-bottom: 15px;
+ }
+ .talk-right{
+ float:right;
+ position: relative;
+ right: 20px;
+ width: 400px;
+ background: #fff; /*右の会話の背景色*/
+ border: 2px solid #666;
+ border-radius: 10px;
+ box-shadow: 1px 1px 5px #aaa; /*右の会話の影*/
+ padding: 10px 20px;
+ margin-top: 5px;
+ margin-bottom:15px;
+ }
+ .talk-right:before {
+ content: "";
+ display: inline-block;
+ border: 10px solid transparent;
+ border-left-color: #666;
+ position: absolute;
+ right: -20px;
+ top: 25%;
+ margin-top: -9px;
+}
+.talk-right:after {
+ content: "";
+ display: inline-block;
+ border: 9px solid transparent;
+ border-left-color: #fff;
+ position: absolute;
+ right: -16px;
+ top: 25%;
+ margin-top: -8px;
+}
+.talk-end{
+ clear:both;
+}
+/*****レスポンシブ設定*****/
+@media screen and (max-width: 480px){
+ .left-icon{
+ width: 40px;
+ height: 40px;
+ }
+ .talk-left{
+ width: 65%;
+ }
+ .right-icon{
+ width: 40px;
+ height: 40px;
+ }
+ .talk-right{
+ width: 65%;
+ }
+ }
+ @media screen and (max-width: 380px){
+ .left-icon{
+ width: 30px;
+ height: 30px;
+ }
+ .talk-left{
+ width: 65%;
+ }
+ .right-icon{
+ width: 30px;
+ height: 30px;
+ }
+ .talk-right{
+ width: 65%;
+ }
+}
+
 </style>

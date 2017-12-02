@@ -1,4 +1,5 @@
-<!-- シェア数の数字 -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!--シェア数の数字-->
 <script>
 //Facebookのシェア数を取得
 function get_social_count_facebook(url, selcter) {
@@ -38,23 +39,76 @@ jQuery(function(){
 });
 </script>
 
-<!-- アフィリエイト -->
-<!-- BitFlyer -->
-<a href="https://bitflyer.jp?bf=y4wug4ex" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_05_468x60.gif?201709" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>
-
 <!--シェアボタン-->
 <div class="share-3d">
-  <span style="font-size: 8px">シェアする</span>
-  <div class="share-3d-inner">
-    <!--はてブ-->
-    <a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="blogicon-bookmark lg"></i><br> <span class="hatebu-count small-text"><i class="fa fa-spinner fa-spin"></i></span></a>
-    <!--Facebook-->
-    <a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" class="facebook-button" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" ><i class="blogicon-facebook lg"></i><br><span class="facebook-count small-text"><i class="fa fa-spinner fa-spin"></i></span></a>
-    <!--Twitter-->
-    <a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" class="twitter-button" target="_blank"><i class="blogicon-twitter lg"></i><br><span class="small-text">Twitter</span></a>
-    <!--Googleプラス-->
-    <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'Gwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i><br><span class="small-text">Google+</span></a>
-    <!--Pocket-->
-    <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i><br><span class="small-text">Pocket</span></a>
-  </div>
+<span style="font-size: 8px">シェアする</span>
+<div class="share-3d-inner">
+<!--はてブ-->
+<a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="blogicon-bookmark lg"></i><br> <span class="hatebu-count small-text"><i class="fa fa-spinner fa-spin"></i></span></a>
+<!--Facebook-->
+<a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="facebook-button"><i class="blogicon-facebook lg"></i><br><span class="facebook-count small-text"><i class="fa fa-spinner fa-spin"></i></span></a>
+<!--Twitter-->
+<a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" target="_blank" class="twitter-button"><i class="blogicon-twitter lg"></i><br><span class="small-text">Twitter</span></a>
+<!--ググタス-->
+<a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'Gwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i><br><span class="small-text">Google</span></a>
+<!--Pocket-->
+<a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i><br><span class="small-text">Pocket</span></a>
+
 </div>
+</div>
+
+<style type=text/css>
+/*シェアボタン*/
+.share-3d{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.share-3d-inner a {
+    position: relative;
+    display: inline-block;
+    width: 15%;
+    height: 40px;
+    line-height: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+.share-3d .small-text{
+    font-size: 10px;
+}
+.share-3d .hatena-bookmark-button{
+    background: #00A4DE;
+    box-shadow: 0 3px #43638b;
+}
+.share-3d .twitter-button{
+    background: #55ACEE;
+    box-shadow: 0 3px #0092ca;
+}
+.share-3d .googleplus-button{
+    background: #C53727;
+    box-shadow: 0 3px #ad3a2d;
+}
+.share-3d .facebook-button{
+    background: #405BA7;
+    box-shadow: 0 3px #2c4373;
+}
+.share-3d .pocket-button{
+    background: #EE4256;
+    box-shadow: 0 3px 0 #c0392b;
+}
+.share-3d .line-button{
+    position:relative;
+    top: 2px;
+    background: #00C300;
+    box-shadow: 0 3px 0 green;
+}
+.share-3d .share-3d a:active{
+    top: 3px;
+    box-shadow: none;
+}
+.share-3d .line-button:active{
+    top: 5px;
+}
+</style>

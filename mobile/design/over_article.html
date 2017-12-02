@@ -1,0 +1,117 @@
+<!-- 広告@記事上 -->
+<!-- START v1.02 params=[insentense-adsense,U,,,1,,after,stay,,,true,広告禁止] from http://uxlayman.hatenablog.com/entry/2017/01/26/insentenseform -->
+<script>
+var adsenseCode = (function () {/*
+
+<p style='text-align:center'>Sponsored Link</p>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></scrip>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6668465291882766"
+     data-ad-slot="6503586063"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</scrip>
+
+<p> </p>
+
+
+*/}).toString().match(/\/\*([^]*)\*\//)[1].replace(/scrip>/g, 'script>');
+
+addEventListener("DOMContentLoaded", function() {
+
+    if ($('meta[property="article:tag"][content="広告禁止"]').size() > 0) {
+        return;
+    }
+
+    var $targetElements = $('.entry-content h1');
+    var $target = $targetElements.eq(0);
+    $target.after($('.insentense-adsense'));
+    $('.insentense-adsense').html(adsenseCode);
+
+}, false);
+</script>
+<div class="insentense-adsense"></div>
+<!-- END v1.02 from http://uxlayman.hatenablog.com/entry/2017/01/26/insentenseform -->
+
+<!-- 広告@記事中 -->
+<!-- START v1.02 params=[insentense-adsense2,MC,1,2,,,before,stay,,,true,広告禁止] from http://uxlayman.hatenablog.com/entry/2017/01/26/insentenseform -->
+<script>
+var adsenseCode2 = (function () {/*
+
+<p style='text-align:center'>Sponsored Link</p>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></scrip>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6668465291882766"
+     data-ad-slot="5033703670"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</scrip>
+
+<p> </p>
+
+
+*/}).toString().match(/\/\*([^]*)\*\//)[1].replace(/scrip>/g, 'script>');
+
+addEventListener("DOMContentLoaded", function() {
+
+    if ($('meta[property="article:tag"][content="広告禁止"]').size() > 0) {
+        return;
+    }
+
+    var $targetElements = $('.entry-content h3');
+    var $target = $targetElements.eq(Math.floor($targetElements.size() * 1 / 2));
+    $target.before($('.insentense-adsense2'));
+    $('.insentense-adsense2').html(adsenseCode2);
+
+}, false);
+</script>
+<div class="insentense-adsense2"></div>
+<!-- END v1.02 from http://uxlayman.hatenablog.com/entry/2017/01/26/insentenseform -->
+
+
+<!-- 広告@記事下 -->
+<!-- START v1.02 params=[insentense-adsense3,D,,,,1,before,stay,,,true,広告禁止] from http://uxlayman.hatenablog.com/entry/2017/01/26/insentenseform -->
+<script>
+var adsenseCode3 = (function () {/*
+
+<p style='text-align:center'>Sponsored Link</p>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></scrip>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6668465291882766"
+     data-ad-slot="5385057468"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</scrip>
+
+<p> </p>
+
+
+*/}).toString().match(/\/\*([^]*)\*\//)[1].replace(/scrip>/g, 'script>');
+
+addEventListener("DOMContentLoaded", function() {
+
+    if ($('meta[property="article:tag"][content="広告禁止"]').size() > 0) {
+        return;
+    }
+
+    var $targetElements = $('.entry-footer');
+    var $target = $targetElements.eq($targetElements.size() - 1);
+    $target.before($('.insentense-adsense3'));
+    $('.insentense-adsense3').html(adsenseCode3);
+
+}, false);
+</script>
+<div class="insentense-adsense3"></div>
+<!-- END v1.02 from http://uxlayman.hatenablog.com/entry/2017/01/26/insentenseform -->
