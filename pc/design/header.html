@@ -1,24 +1,18 @@
-<!-- アフィリエイト -->
-<!-- Zaif -->
-<div id="top_affiliate">
-  <a href="https://zaif.jp?ac=lgmdrqfkzg" rel="nofollow"><img src="https://d2p8taqyjofgrq.cloudfront.net/images/affiliate/banner/zaif_D_728x90.png?ac=lgmdrqfkzg" /></a>
-</div>
-
 <script>
 // 目次 表示/非表示ボタン
 $(function(){
-  var $Contents = $(".table-of-contents")
-  $($Contents).before('<p class="show-area">[目次を見る]</p>');
-  $(".show-area").click(function(){
-    var $this = $(this);
-    if($Contents.css('display') == 'none'){
-      $Contents.show(),
-      $this.text("[目次を閉じる]");
-    }else{
-      $Contents.hide(),
-      $this.text("[目次を見る]")
-    };
-  });
+var $Contents = $(".table-of-contents")
+$($Contents).before('<p class="show-area">[目次を見る]</p>');
+$(".show-area").click(function(){
+var $this = $(this);
+if($Contents.css('display') == 'none'){
+$Contents.show(),
+$this.text("[目次を閉じる]");
+}else{
+$Contents.hide(),
+$this.text("[目次を見る]")
+};
+});
 });
 </script>
 
@@ -26,7 +20,7 @@ $(function(){
 /* ソーシャルブックマークボタンの配備 */
 /* 回り込み解除のためのクラス */
 .clearfix{
-  zoom:1;
+    zoom:1;
 }
 .clearfix:after{
     content:"";
